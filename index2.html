@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS S3 Project</title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Almacenamiento de imagenes en AWS S3</h1>
+      </header>
+
+      <main>
+        <section class="upload-section">
+          <h2>Cargar una nueva Imagen</h2>
+          <form id="upload-form">
+            <div class="file-input-container">
+              <input type="file" id="file-input" accept="image/*" required />
+              <div class="progress-bar" id="progress-bar">
+                <div class="progress" id="progress"></div>
+              </div>
+            </div>
+            <button type="submit" class="upload-btn">Subir Archivo</button>
+          </form>
+        </section>
+
+        <section class="search-section">
+          <h2>Buscar Imágenes</h2>
+          <div class="search-container">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Buscar por nombre de archivo..."
+            />
+            <button id="search-button">Buscar</button>
+          </div>
+        </section>
+
+        <section class="gallery-section">
+          <h2>Galería de Imágenes</h2>
+          <div id="image-container" class="image-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <!-- AWS SDK -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1386.0.min.js"></script>
+    <script src="script2.js"></script>
+  </body>
+</html>
